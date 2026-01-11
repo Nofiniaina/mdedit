@@ -1,1 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  /* ============================================ */
+  /* BLUE PALETTE */
+  /* ============================================ */
+  --color-blue-primary: #0052cc;
+  --color-blue-hover: #0065ff;
+  --color-blue-pressed: #0747a6;
+  --color-blue-light: #deebff;
+  --color-blue-dark: #579dff;
+
+  /* ============================================ */
+  /* LIGHT MODE NEUTRALS */
+  /* ============================================ */
+  --color-neutral-0: #ffffff;
+  --color-neutral-100: #fafbfc;
+  --color-neutral-200: #f4f5f7;
+  --color-neutral-300: #ebecf0;
+  --color-neutral-400: #dfe1e6;
+  --color-neutral-600: #6b778c;
+  --color-neutral-700: #42526e;
+  --color-neutral-800: #172b4d;
+  --color-neutral-900: #091e42;
+
+  /* ============================================ */
+  /* DARK MODE NEUTRALS */
+  /* ============================================ */
+  --color-dark-0: #ffffff;
+  --color-dark-100: #b6c2cf;
+  --color-dark-200: #9fadbc;
+  --color-dark-300: #596773;
+  --color-dark-400: #38414a;
+  --color-dark-500: #2c333a;
+  --color-dark-600: #22272b;
+  --color-dark-700: #1d2125;
+  --color-dark-800: #161a1d;
+  --color-dark-900: #0d1117;
+
+  /* ============================================ */
+  /* SUCCESS COLORS */
+  /* ============================================ */
+  --color-success: #00875a;
+  --color-success-light: #36b37e;
+  --color-success-bg: #e3fcef;
+  --color-success-dark-bg: #1f3933;
+
+  /* ============================================ */
+  /* ERROR COLORS */
+  /* ============================================ */
+  --color-error: #de350b;
+  --color-error-light: #ff5630;
+  --color-error-bg: #ffebe6;
+  --color-error-dark-bg: #3d2420;
+
+  /* ============================================ */
+  /* WARNING COLORS */
+  /* ============================================ */
+  --color-warning: #ff991f;
+  --color-warning-light: #ffab00;
+  --color-warning-bg: #fffae6;
+  --color-warning-dark-bg: #3d3020;
+
+  /* ============================================ */
+  /* INFO COLORS */
+  /* ============================================ */
+  --color-info: #0052cc;
+  --color-info-light: #579dff;
+  --color-info-bg: #deebff;
+  --color-info-dark-bg: #1c2b41;
+
+  /* ============================================ */
+  /* ACCENT COLORS */
+  /* ============================================ */
+  --color-purple: #6554c0;
+  --color-teal: #00b8d9;
+  --color-green: #36b37e;
+  --color-red: #ff5630;
+  --color-orange: #ff991f;
+  --color-yellow: #ffc400;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
