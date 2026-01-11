@@ -1,0 +1,43 @@
+name: Markdown editor and previewer CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository HEAD branch 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      
+      # Install pnpm 
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+
+      # Build the project
+      - name: Build the project
+        run: pnpm run build
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
