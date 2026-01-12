@@ -1,9 +1,5 @@
 import { IconCode, IconFile, IconFileDescription, IconX, type ReactNode } from "@tabler/icons-react";
-
-interface ExportModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import type { ModalProps } from "../../types/ModalProps";
 
 interface ButtonActionProps {
   icon: ReactNode;
@@ -35,7 +31,7 @@ function ButtonAction({ icon, filetype, descri }: ButtonActionProps) {
   );
 }
 
-function ExportModal({ isOpen, onClose }: ExportModalProps) {
+function ExportModal({ isOpen, onClose }: ModalProps) {
   if (!isOpen) return null;
 
   return (
