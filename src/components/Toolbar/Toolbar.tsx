@@ -7,9 +7,11 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 import LinkModal from "../Modals/LinkModal";
+import TablesModal from "../Modals/TablesModal";
 
 function Toolbar() {
   const [showLinkModal, setShowLinkModal] = useState(false);
+  const [showTablesModal, setShowTablesModal] = useState(false);
 
   return (
     <>
@@ -73,7 +75,9 @@ function Toolbar() {
             >
               <IconLink className="w-5 h-5" />
             </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
+            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors"
+              onClick={() => { setShowTablesModal(true) }}
+            >
               <IconTable className="w-5 h-5" />
             </button>
           </div>
@@ -96,6 +100,11 @@ function Toolbar() {
       <LinkModal
         isOpen={showLinkModal}
         onClose={() => { setShowLinkModal(false) }}
+      />
+
+      <TablesModal
+        isOpen={showTablesModal}
+        onClose={() => { setShowTablesModal(false) }}
       />
     </>
   );
