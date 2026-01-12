@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import LinkModal from "../Modals/LinkModal";
 import TablesModal from "../Modals/TablesModal";
+import TooltipButton from "../Shared/TooltipButton";
 
 function Toolbar() {
   const [showLinkModal, setShowLinkModal] = useState(false);
@@ -19,67 +20,38 @@ function Toolbar() {
        shadow-sm fade-in transition-colors duration-300 text-neutral-700">
         <div className="flex gap-4">
           <div className="flex items-center">
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconBold className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconItalic className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconStrikethrough className="w-5 h-5" />
-            </button>
+            <TooltipButton icon={<IconBold className="w-5 h-5" />} tooltip="Bold" onClick={() => { }} />
+            <TooltipButton icon={<IconItalic className="w-5 h-5" />} tooltip="Italic" onClick={() => { }} />
+            <TooltipButton icon={<IconStrikethrough className="w-5 h-5" />} tooltip="Strikethrough" onClick={() => { }} />
+
           </div>
 
           <div className="flex">
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconH1 className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconH2 className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconH3 className="w-5 h-5" />
-            </button>
+            <TooltipButton icon={<IconH1 className="w-5 h-5" />} tooltip="H1" onClick={() => { }} />
+            <TooltipButton icon={<IconH2 className="w-5 h-5" />} tooltip="H2" onClick={() => { }} />
+            <TooltipButton icon={<IconH3 className="w-5 h-5" />} tooltip="H3" onClick={() => { }} />
           </div>
 
           <div className="flex">
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconList className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconListNumbers className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconListCheck className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconBlockquote className="w-5 h-5" />
-            </button>
+            <TooltipButton icon={<IconList className="w-5 h-5" />} tooltip="List" onClick={() => { }} />
+            <TooltipButton icon={<IconListNumbers className="w-5 h-5" />} tooltip="List numbers" onClick={() => { }} />
+            <TooltipButton icon={<IconListCheck className="w-5 h-5" />} tooltip="List check" onClick={() => { }} />
+            <TooltipButton icon={<IconBlockquote className="w-5 h-5" />} tooltip="Blockquote" onClick={() => { }} />
           </div>
 
           <div className="flex">
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconCode className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconCodeDots className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors">
-              <IconTerminal2 className="w-5 h-5" />
-            </button>
+            <TooltipButton icon={<IconCode className="w-5 h-5" />} tooltip="Inline code" onClick={() => { }} />
+            <TooltipButton icon={<IconCodeDots className="w-5 h-5" />} tooltip="Code blocks" onClick={() => { }} />
+            <TooltipButton icon={<IconTerminal2 className="w-5 h-5" />} tooltip="Terminal command" onClick={() => { }} />
           </div>
 
           <div className="flex">
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors"
+            <TooltipButton icon={<IconLink className="w-5 h-5" />} tooltip="Insert link"
               onClick={() => { setShowLinkModal(true) }}
-            >
-              <IconLink className="w-5 h-5" />
-            </button>
-            <button className="p-2 bg-white rounded hover:bg-neutral-300 transition-colors"
+            />
+            <TooltipButton icon={<IconTable className="w-5 h-5" />} tooltip="Insert table"
               onClick={() => { setShowTablesModal(true) }}
-            >
-              <IconTable className="w-5 h-5" />
-            </button>
+            />
           </div>
         </div>
 
