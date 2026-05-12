@@ -3,6 +3,7 @@ import Input from "../Shared/Input";
 import Status from "./Status";
 import { useState } from "react";
 import ExportModal from "../Modals/ExportModal";
+import { Button } from "../ui/button";
 
 function Header() {
   const [showExportModal, setShowExportModal] = useState(false);
@@ -28,6 +29,7 @@ function Header() {
           <button className="px-4 py-2 bg-blue-primary text-white hover:bg-blue-hover rounded shadow-sm">
             Share
           </button>
+          <Button>Share</Button>
         </div>
       </header>
 
