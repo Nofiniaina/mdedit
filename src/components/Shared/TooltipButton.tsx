@@ -12,7 +12,7 @@ function TooltipButton({ icon, tooltip, onClick }: TooltipButtonProps) {
       onClick={onClick}
     >
       {icon}
-      <span className="absolute px-2 py-1 bg-neutral-900 text-white bottom-full left-1/2 -translate-x-1/2 translate-y-1 text-xs 
+      <span className="absolute px-2 py-1 bg-card-foreground text-white bottom-full left-1/2 -translate-x-1/2 translate-y-1 text-xs 
         rounded whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all 
         duration-200 pointer-events-none">
         {tooltip}
